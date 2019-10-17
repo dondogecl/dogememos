@@ -11,6 +11,14 @@
 <div class="content">
     <h1>Task Master</h1>
     
+    <!-- en caso de que existan registros, se muestra la tabla -->
+    {% if tasks|length < 1 %}
+    
+    <h4>No tasks found</h4>
+    <h5>(But you can create new ones)</h5>
+    
+    {% else %}
+    
     <table>
         <tr>
             <th>Task</th>
@@ -24,16 +32,18 @@
             <td>{{ task.content }}</td>
             <td>{{ task.date_created.date() }}</td>
             <td>
-                <a href="/delete/{{ task.id }}">Delete</a>
+                <a href="/delete/{{task.id}}">Delete</a>
                 <br>
-                <a href="#">Update</a>
+                <a href="/update/{{task.id}}">Update</a>
             </td>
         </tr>
         {% endfor %}
     </table>
+    
+    {% endif %}
         
     <form action="/" method="POST">
-        <input type="text" name="content" id="content">
+        <input type="text" name="content" id="content" placeholder="escriba una tarea que desee agregar">
         <input type="submit" class="submit" value="Add Task">
     </form>
 
