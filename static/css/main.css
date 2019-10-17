@@ -1,4 +1,52 @@
 body {
     margin: 0;
-    font-family: sans-serif
+    font-family: sans-serif;
+    
+}
+
+h1 {
+    text-align: center;
+    text-shadow: 3px 3px 6px rgba(0, 50, 120, 0.5);
+}
+    
+
+table, form{
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    }
+
+
+    
+td {
+    padding: 10px 20px 10px 20px;
+    background-color: rgba(0,0,155,0.05);
+    width: 30%;
+    
+}
+
+#content {
+    width: 60%;
+    height: 50px;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.submit {
+    margin-left: 45%;
+    margin-right: 45%;
+    display: block;
+    height: 50px;
+    font-weight: 400;
+    border-radius: 50%;
+    box-shadow: 3px 3px 7px rgba(0, 50, 120, 0.5);
+}
+
+.submit:hover{
+    box-shadow: 3px 3px 7px rgba(0, 50, 120, 0.3);
+}
+
+.submit:active{
+    font-weight: 600;
+    box-shadow: 3px 3px 7px rgba(0, 50, 120, 0.0);
     }
