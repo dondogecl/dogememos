@@ -22,7 +22,7 @@ class Todo(db.Model):
 
 
 # define routes
-@app.route('/')
+@app.route('/', methods=['POST', 'GET'])
 def index():
     #return "estas en el index"
     return render_template("index.html")
