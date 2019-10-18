@@ -24,29 +24,3 @@ td {
     width: 30%;
     
 }
-
-#content {
-    width: 60%;
-    height: 50px;
-    margin-left: 15%;
-    margin-right: 15%;
-}
-
-.submit {
-    margin-left: 45%;
-    margin-right: 45%;
-    display: block;
-    height: 50px;
-    font-weight: 400;
-    border-radius: 50%;
-    box-shadow: 3px 3px 7px rgba(0, 50, 120, 0.5);
-}
-
-.submit:hover{
-    box-shadow: 3px 3px 7px rgba(0, 50, 120, 0.3);
-}
-
-.submit:active{
-    font-weight: 600;
-    box-shadow: 3px 3px 7px rgba(0, 50, 120, 0.0);
-    }
