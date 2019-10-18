@@ -3,7 +3,6 @@
 {% block head %}
 
 <title>Task Master</title>
-
 {% endblock %}
 
 {% block body %}
@@ -23,18 +22,25 @@
         <tr>
             <th>Task</th>
             <th>Added</th>
+            <th>Completed?</th>
             <th>Actions</th>
         </tr>
 
         {% for task in tasks %}
-
         <tr>
             <td>{{ task.content }}</td>
             <td>{{ task.date_created.date() }}</td>
             <td>
+                <form action="/complete/{{task.id}}" method="POST">
+                    <input type="checkbox" name="completed" {{ 'checked="checked"' if task.completed else '' }}>
+                    <input type="submit" style="display:none; opacity:0;" />
+                </form>
+            </td>
+            <td>
                 <a href="/delete/{{task.id}}">Delete</a>
-                <br>
+                <br/>
                 <a href="/update/{{task.id}}">Update</a>
+                <br/>
             </td>
         </tr>
         {% endfor %}
@@ -54,5 +60,16 @@
 
 </div>
 
+<script type="text/javascript">
+    let elementsArray = document.querySelectorAll('input[name="completed"]');
+
+    elementsArray.forEach(function(elem) {
+        elem.addEventListener("click", function(e) {
+            if(e.target.type == "checkbox"){
+                elem.parentElement.submit();
+            }
+        });
+    });
+</script>
 
 {% endblock %}
