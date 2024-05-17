@@ -6,4 +6,4 @@ itsdangerous==2.1.0
 Jinja2==3.0.2
 MarkupSafe==2.1.0
 SQLAlchemy==1.4.0
-Werkzeug==2.0.2
+Werkzeug==3.0.3
